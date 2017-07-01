@@ -228,7 +228,7 @@ end
 
 
 if minetest.get_modpath('bonemeal') then
-  bonemeal:add_crop({'dpies:onion_', 3, 'dpies:onion'})
+  bonemeal:add_crop({{'dpies:onion_', 3, 'dpies:onion'},})
 end
 
 
