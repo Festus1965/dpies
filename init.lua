@@ -230,3 +230,39 @@ end
 if minetest.get_modpath('bonemeal') then
   bonemeal:add_crop({'dpies:onion_', 3, 'dpies:onion'})
 end
+
+
+if minetest.get_modpath('inspire') then
+	minetest.register_craft({
+		output = 'dpies:onion 3',
+		type = 'shapeless',
+		recipe = {
+			'dpies:onion',
+			'inspire:inspiration',
+		}
+  })
+
+	minetest.register_craft({
+		output = 'dpies:apple_pie',
+		type = 'shapeless',
+		recipe = {
+			'default:apple',
+			'inspire:inspiration',
+			'inspire:inspiration',
+			'inspire:inspiration',
+			'inspire:inspiration',
+		}
+  })
+
+	minetest.register_craft({
+		output = 'dpies:meat_pie',
+		type = 'shapeless',
+		recipe = {
+			'mobs:meat_raw',
+			'inspire:inspiration',
+			'inspire:inspiration',
+			'inspire:inspiration',
+			'inspire:inspiration',
+		}
+  })
+end
