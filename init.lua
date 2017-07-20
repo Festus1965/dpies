@@ -7,11 +7,6 @@ dpies_mod.version = "1.0"
 dpies_mod.path = minetest.get_modpath(minetest.get_current_modname())
 dpies_mod.world = minetest.get_worldpath()
 
-local mobs_name = 'mobs'
-if minetest.get_modpath('mobs_dw') then
-  mobs_name = 'mobs_dw'
-end
-
 
 minetest.register_craftitem("dpies:apple_pie_slice", {
 	description = "Apple Pie Slice",
@@ -67,7 +62,7 @@ if minetest.registered_items['big_trees:syrup'] then
   })
 end
 
-if minetest.registered_items[mobs_name..':bucket_milk'] then
+if minetest.registered_items['mobs:bucket_milk'] then
 	minetest.register_craft({
 		output = 'dpies:apple_pie_uncooked',
 		type = 'shapeless',
@@ -75,15 +70,15 @@ if minetest.registered_items[mobs_name..':bucket_milk'] then
 			'default:apple',
 			'default:apple',
 			'farming:flour',
-			mobs_name..':bucket_milk',
+			'mobs:bucket_milk',
 		},
 		replacements = {
-			{mobs_name..':bucket_milk', 'dpies:bucket_empty'},
+			{'mobs:bucket_milk', 'dpies:bucket_empty'},
 		},
 	})
 end
 
-if minetest.registered_items[mobs_name..':honey'] then
+if minetest.registered_items['mobs:honey'] then
 	minetest.register_craft({
 		output = 'dpies:apple_pie_uncooked',
 		type = 'shapeless',
@@ -91,12 +86,12 @@ if minetest.registered_items[mobs_name..':honey'] then
 			'default:apple',
 			'default:apple',
 			'farming:flour',
-			mobs_name..':honey',
+			'mobs:honey',
 		},
 	})
 end
 
-if minetest.registered_items[mobs_name..':meat_raw'] then
+if minetest.registered_items['mobs:meat_raw'] then
 	minetest.register_craftitem("dpies:meat_pie_uncooked", {
 		description = "Uncooked Meat Pie",
 		inventory_image = "dpies_meat_pie_uncooked.png",
@@ -106,8 +101,8 @@ if minetest.registered_items[mobs_name..':meat_raw'] then
 		output = 'dpies:meat_pie_uncooked',
 		type = 'shapeless',
 		recipe = {
-			mobs_name..':meat_raw',
-			mobs_name..':meat_raw',
+			'mobs:meat_raw',
+			'mobs:meat_raw',
 			'dpies:onion',
 			'farming:flour',
 		},
@@ -263,7 +258,7 @@ if minetest.get_modpath('inspire') then
 		output = 'dpies:meat_pie',
 		type = 'shapeless',
 		recipe = {
-			mobs_name..':meat_raw',
+			'mobs:meat_raw',
 			'inspire:inspiration',
 			'inspire:inspiration',
 			'inspire:inspiration',
