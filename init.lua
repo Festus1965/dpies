@@ -3,7 +3,7 @@
 -- Distributed under the LGPLv2.1 (https://www.gnu.org/licenses/old-licenses/lgpl-2.1.en.html)
 
 dpies_mod = {}
-dpies_mod.version = "1.0"
+dpies_mod.version = "20171028"
 dpies_mod.path = minetest.get_modpath(minetest.get_current_modname())
 dpies_mod.world = minetest.get_worldpath()
 
