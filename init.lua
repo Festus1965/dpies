@@ -63,39 +63,43 @@ if minetest.registered_items['big_trees:syrup'] then
 		},
 	})
 
-	minetest.register_craft({
-		output = mod_name..':apple_pie_uncooked',
-		type = 'shapeless',
-		recipe = {
-			'environ:pear',
-			'environ:pear',
-			'farming:flour',
-			'big_trees:syrup',
-			'big_trees:syrup',
-			'big_trees:syrup',
-		},
-		replacements = {
-			{mod_name..':syrup', 'vessels:glass_bottle'},
-			{mod_name..':syrup', 'vessels:glass_bottle'},
-			{mod_name..':syrup', 'vessels:glass_bottle'},
-		},
-	})
+	if minetest.registered_items['environ:pear'] then
+		minetest.register_craft({
+			output = mod_name..':apple_pie_uncooked',
+			type = 'shapeless',
+			recipe = {
+				'environ:pear',
+				'environ:pear',
+				'farming:flour',
+				'big_trees:syrup',
+				'big_trees:syrup',
+				'big_trees:syrup',
+			},
+			replacements = {
+				{mod_name..':syrup', 'vessels:glass_bottle'},
+				{mod_name..':syrup', 'vessels:glass_bottle'},
+				{mod_name..':syrup', 'vessels:glass_bottle'},
+			},
+		})
+	end
 end
 
 if minetest.registered_items['mobs:bucket_milk'] then
-	minetest.register_craft({
-		output = mod_name..':apple_pie_uncooked',
-		type = 'shapeless',
-		recipe = {
-			'environ:pear',
-			'environ:pear',
-			'farming:flour',
-			'mobs:bucket_milk',
-		},
-		replacements = {
-			{'mobs:bucket_milk', 'bucket:bucket_empty'},
-		},
-	})
+	if minetest.registered_items['environ:pear'] then
+		minetest.register_craft({
+			output = mod_name..':apple_pie_uncooked',
+			type = 'shapeless',
+			recipe = {
+				'environ:pear',
+				'environ:pear',
+				'farming:flour',
+				'mobs:bucket_milk',
+			},
+			replacements = {
+				{'mobs:bucket_milk', 'bucket:bucket_empty'},
+			},
+		})
+	end
 
 	minetest.register_craft({
 		output = mod_name..':apple_pie_uncooked',
@@ -124,16 +128,18 @@ if minetest.registered_items['mobs:honey'] then
 		},
 	})
 
-	minetest.register_craft({
-		output = mod_name..':apple_pie_uncooked',
-		type = 'shapeless',
-		recipe = {
-			'environ:pear',
-			'environ:pear',
-			'farming:flour',
-			'mobs:honey',
-		},
-	})
+	if minetest.registered_items['environ:pear'] then
+		minetest.register_craft({
+			output = mod_name..':apple_pie_uncooked',
+			type = 'shapeless',
+			recipe = {
+				'environ:pear',
+				'environ:pear',
+				'farming:flour',
+				'mobs:honey',
+			},
+		})
+	end
 end
 
 
